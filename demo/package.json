@@ -1,0 +1,32 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "cross-env rm -rf dist && parcel build index.html --no-source-maps",
+    "build:page": "parcel build index.html --dist-dir ../docs --no-source-maps --public-url ."
+  },
+  "dependencies": {
+    "react-app-polyfill": "^3.0.0"
+  },
+  "alias": {
+    "react": "../node_modules/react",
+    "react-dom": "../node_modules/react-dom/profiling",
+    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling",
+    "autoprefixer": "../node_modules/autoprefixer",
+    "dist": "../dist"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "parcel": "^2.6.2",
+    "typescript": "^4.7.4"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 versions",
+    "not ie < 10"
+  ]
+}
