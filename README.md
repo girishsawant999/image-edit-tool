@@ -3,129 +3,59 @@
  <img height=200px src="./.github/readme/intro.png" alt="Project logo"></a>
 </p>
 
-<h2 align="center">React Package Template</h2>
+<h2 align="center">React Image Edit</h2>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)](#)
-[![GitHub Issues](https://img.shields.io/github/issues/girishsawant999/react-typescript-package-template.svg)](https://github.com/girishsawant999/react-typescript-package-template/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/girishsawant999/react-typescript-package-template.svg)](https://github.com/girishsawant999/react-typescript-package-template/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/girishsawant999/image-edit-tool.svg)](https://github.com/girishsawant999/image-edit-tool/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/girishsawant999/image-edit-tool.svg)](https://github.com/girishsawant999/image-edit-tool/pulls)
 
-[![Build ](https://img.shields.io/github/workflow/status/girishsawant999/react-typescript-package-template/CI/main)](https://github.com/girishsawant999/react-typescript-package-template/actions)
+[![Build ](https://img.shields.io/github/workflow/status/girishsawant999/image-edit-tool/CI/main)](https://github.com/girishsawant999/image-edit-tool/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> A template code repo for creating typescript based react component or typescript based modules to publish over <a href="https://www.npmjs.com" rel="noopener">npm</a>. Just follow few steps and you can start publishing your code on npm.
+<p align="center"> A react npm package to crop, rotate & resize image before saving or upload.
     <br> 
 </p>
 
-## 📝 Table of Contents
+<p align="center">
+  <a href="https://girishsawant999.github.io/image-edit-tool/" target="_blank">
+    React Image Edit Playground
+  </a>
+</p>
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Publish](#publish)
-- [Built Using](#built_using)
-- [Contributing](./.github/CONTRIBUTING.md)
-- [Authors](#authors)
+## 📝 Usage
 
-## 🧐 About <a name = "about"></a>
+Just install the package using command
 
-A template code for creating typescript based react component or modules. Bundled with configuration for jest, eslint, prettier, and husky pre-commit hook.
+```
+npm install @girishsawant999/react-image-edit
+```
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+And then import component in your react app
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [publish](#publish) notes on how to publish the package on npm.
+```javascript
+import ImageEditor from '@girishsawant999/react-image-edit';
 
-### Prerequisites
+// Use ImageEditor Component
 
-As you already know about JS, you better know the prerequisites, Node JS and NPM.
+<ImageEditor src={defaultURL} onSave={(url): void => setUrl(url)} saveButtonText="Preview" />;
+```
 
-### Setup & Installation
+That's all and you are ready to go.
 
-Let's start with the following steps.
+## 📃 Props
 
-- Now <a href="https://github.com/girishsawant999/react-typescript-package-template/generate">click here</a> to use this template to create a new repo for package.
-
-- Once repo is created clone it into your local machine.
-
-- Now run the following code in project directory to install dependencies.
-
-  ```
-    npm run setup
-  ```
-
-- Thats all you are ready to create new typescript based react component package or TS module. Just update the **_*src/index.tsx*_**.
-
-### Build Package
-
-Follow to step to create a build.
-
-- Once you updated the **_src/index.tsx_** and created react component or typescript module.
-
-- Then the following command in projet directory.
-
-  ```
-    npm run build
-  ```
-
-- Once the command output is completed you will get a **_dist_** folder with index.js and index.d.ts files.
-
-- Thats all you are ready to publish your package on npm.
-
-### Testing
-
-can test your package in the following way.
-
-- You can import your component from dist folder in your **_*demo/index.tsx*_** file.
-
-- Then in **_*demo/index.tsx*_** you can pass specific props for the component. Now run following command in **_demo_** directory
-
-  ```
-    npm run start
-  ```
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Following step are used to run test cases created for component or module.
-
-- As Jest framework is installed in your package.json. So add test files in **\_\_\_test\_\_\_** folder.
-
-- Then run command to execute test cases.
-  ```
-    npm run test
-  ```
-
-## 🚀 Publish to npm<a name = "publish"></a>
-
-You have tested your package and ready to publish to NPM. Follow the steps.
-
-- Once the build is created successfully & tested.
-
-- Update package.json file with your package name and version and other details.
-
-- Now run the following command in project directory to login with your npm account.
-  ```
-    npm run login
-  ```
-- Now run the following command to publish your package on npm.
-
-  ```
-    npm run publish
-  ```
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [React](https://reactjs.org)
-- [Parcel](https://parceljs.org)
-- [Typescript](https://www.typescriptlang.org)
-- [Javascript](https://developer.mozilla.org/en-US/)
-- [Jest](https://jestjs.io)
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@girishsawant999](https://girishsawant999.github.io) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/girishsawant999/react-typescript-package-template/contributors) who participated in this project.
+| Prop               | Types                     | Description                                                                   |
+| ------------------ | ------------------------- | ----------------------------------------------------------------------------- |
+| src                | string                    | An image source url                                                           |
+| onSave             | (url: string) => void     | A callback function on save button click gives you updated image url          |
+| maxWidth           | number <br> Default: 600  | Final resize width for updated image height will be according to aspect ratio |
+| saveButtonText     | string <br> Default: Save | Button text for final save update                                             |
+| containerClassName | string                    | Classes for container                                                         |
+| imgClassName       | string                    | Classes for Image tag                                                         |
+| toolbarClassName   | string                    | Classes for toolbar div                                                       |

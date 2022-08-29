@@ -1,7 +1,7 @@
 {
-  "name": "@girishsawant999/react-typescript-package-template",
+  "name": "@girishsawant999/react-image-edit",
   "version": "1.0.0",
-  "description": "A react package for ...",
+  "description": "A react package to crop, rotate & resize image before upload or save",
   "type": "module",
   "source": "src/index.tsx",
   "main": "dist/index.js",
@@ -26,21 +26,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/girishsawant999/react-typescript-package-template.git"
+    "url": "git+https://github.com/girishsawant999/image-edit-tool.git"
   },
   "keywords": [
     "react",
     "package",
     "typescript",
     "module",
-    "library"
+    "library",
+    "crop",
+    "react-image-edit",
+    "react-image-crop",
+    "rotate",
+    "resize",
+    "image",
+    "image-edit-tool"
   ],
   "author": "Girish Sawant",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/girishsawant999/react-typescript-package-template/issues"
+    "url": "https://github.com/girishsawant999/image-edit-tool/issues"
   },
-  "homepage": "https://girishsawant999.github.io/react-typescript-package-template",
+  "homepage": "https://girishsawant999.github.io/image-edit-tool",
   "devDependencies": {
     "@parcel/packager-ts": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
@@ -101,5 +108,8 @@
     "> 0.2%",
     "last 2 versions",
     "not ie < 10"
-  ]
+  ],
+  "dependencies": {
+    "react-image-crop": "^10.0.6"
+  }
 }

@@ -1,0 +1,65 @@
+.image-edit-tool-container {
+  max-width: 100%;
+
+  .ReactCrop {
+    width: 100%;
+    height: auto;
+    .ReactCrop__child-wrapper {
+      width: inherit;
+      height: inherit;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    .ReactCrop__crop-selection {
+      .ReactCrop__drag-elements {
+        .ReactCrop__drag-handle {
+          &::after {
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+    button {
+      padding: 0.8rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      --tw-bg-opacity: 1;
+      background-color: rgba(245, 244, 245, var(--tw-bg-opacity));
+      color: #000;
+      outline: none;
+      border: none;
+      border-radius: 0.75rem;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: 200ms;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      &[data-button-name='save'] {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
