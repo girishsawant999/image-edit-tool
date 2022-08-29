@@ -1,0 +1,603 @@
+.image-edit-tool-container {
+  max-width: 100%;
+}
+.image-edit-tool-container .ReactCrop {
+  width: 100%;
+  height: auto;
+}
+.image-edit-tool-container .ReactCrop .ReactCrop__child-wrapper,
+.image-edit-tool-container .ReactCrop .ReactCrop__child-wrapper img {
+  width: inherit;
+  height: inherit;
+}
+.image-edit-tool-container
+  .ReactCrop
+  .ReactCrop__crop-selection
+  .ReactCrop__drag-elements
+  .ReactCrop__drag-handle:after {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+.image-edit-tool-container .toolbar {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  display: -ms-flexbox;
+  display: flex;
+}
+.image-edit-tool-container .toolbar button {
+  --tw-bg-opacity: 1;
+  background-color: rgba(245, 244, 245, var(--tw-bg-opacity));
+  color: #000;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.75rem;
+  outline: none;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  transition: all 0.2s;
+  display: -ms-flexbox;
+  display: flex;
+}
+.image-edit-tool-container .toolbar button:hover {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.image-edit-tool-container .toolbar button[data-button-name='save'] {
+  color: #fff;
+  background: #000;
+}
+.ReactCrop {
+  cursor: crosshair;
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.ReactCrop *,
+.ReactCrop :before,
+.ReactCrop :after {
+  box-sizing: border-box;
+}
+.ReactCrop--disabled,
+.ReactCrop--locked {
+  cursor: inherit;
+}
+.ReactCrop__child-wrapper {
+  max-height: inherit;
+}
+.ReactCrop__child-wrapper > img,
+.ReactCrop__child-wrapper > video {
+  max-width: 100%;
+  max-height: inherit;
+  touch-action: none;
+  display: block;
+}
+.ReactCrop__crop-selection {
+  cursor: move;
+  touch-action: none;
+  border: 1px dashed #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 9999em rgba(0, 0, 0, 0.5);
+}
+.ReactCrop--disabled .ReactCrop__crop-selection {
+  cursor: inherit;
+}
+.ReactCrop--circular-crop .ReactCrop__crop-selection {
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #fff, 0 0 0 9999em rgba(0, 0, 0, 0.5);
+}
+.ReactCrop__crop-selection:focus {
+  border-style: solid;
+  border-color: #00f;
+  outline: none;
+}
+.ReactCrop--invisible-crop .ReactCrop__crop-selection {
+  display: none;
+}
+.ReactCrop__rule-of-thirds-vt:before,
+.ReactCrop__rule-of-thirds-vt:after,
+.ReactCrop__rule-of-thirds-hz:before,
+.ReactCrop__rule-of-thirds-hz:after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  position: absolute;
+}
+.ReactCrop__rule-of-thirds-vt:before,
+.ReactCrop__rule-of-thirds-vt:after {
+  width: 1px;
+  height: 100%;
+}
+.ReactCrop__rule-of-thirds-vt:before {
+  left: 33.3333%;
+}
+.ReactCrop__rule-of-thirds-vt:after {
+  left: 66.6667%;
+}
+.ReactCrop__rule-of-thirds-hz:before,
+.ReactCrop__rule-of-thirds-hz:after {
+  width: 100%;
+  height: 1px;
+}
+.ReactCrop__rule-of-thirds-hz:before {
+  top: 33.3333%;
+}
+.ReactCrop__rule-of-thirds-hz:after {
+  top: 66.6667%;
+}
+.ReactCrop__drag-handle {
+  position: absolute;
+}
+.ReactCrop__drag-handle:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  outline: 1px solid rgba(0, 0, 0, 0);
+  display: block;
+  position: absolute;
+}
+.ReactCrop__drag-handle:focus:after {
+  background: #2dbfff;
+  border-color: #00f;
+}
+.ReactCrop .ord-nw {
+  cursor: nw-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop .ord-nw:after {
+  top: 0;
+  left: 0;
+}
+.ReactCrop .ord-n {
+  cursor: n-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 0;
+  left: 50%;
+}
+.ReactCrop .ord-n:after {
+  top: 0;
+}
+.ReactCrop .ord-ne {
+  cursor: ne-resize;
+  margin-top: -5px;
+  margin-right: -5px;
+  top: 0;
+  right: 0;
+}
+.ReactCrop .ord-ne:after {
+  top: 0;
+  right: 0;
+}
+.ReactCrop .ord-e {
+  cursor: e-resize;
+  margin-top: -5px;
+  margin-right: -5px;
+  top: 50%;
+  right: 0;
+}
+.ReactCrop .ord-e:after {
+  right: 0;
+}
+.ReactCrop .ord-se {
+  cursor: se-resize;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  bottom: 0;
+  right: 0;
+}
+.ReactCrop .ord-se:after {
+  bottom: 0;
+  right: 0;
+}
+.ReactCrop .ord-s {
+  cursor: s-resize;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  bottom: 0;
+  left: 50%;
+}
+.ReactCrop .ord-s:after {
+  bottom: 0;
+}
+.ReactCrop .ord-sw {
+  cursor: sw-resize;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop .ord-sw:after {
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop .ord-w {
+  cursor: w-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 50%;
+  left: 0;
+}
+.ReactCrop .ord-w:after {
+  left: 0;
+}
+.ReactCrop__disabled .ReactCrop__drag-handle {
+  cursor: inherit;
+}
+.ReactCrop__drag-bar {
+  position: absolute;
+}
+.ReactCrop__drag-bar.ord-n {
+  width: 100%;
+  height: 6px;
+  margin-top: -3px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop__drag-bar.ord-e {
+  width: 6px;
+  height: 100%;
+  margin-right: -3px;
+  top: 0;
+  right: 0;
+}
+.ReactCrop__drag-bar.ord-s {
+  width: 100%;
+  height: 6px;
+  margin-bottom: -3px;
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop__drag-bar.ord-w {
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop--new-crop .ReactCrop__drag-bar,
+.ReactCrop--new-crop .ReactCrop__drag-handle,
+.ReactCrop--fixed-aspect .ReactCrop__drag-bar,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w {
+  display: none;
+}
+@media (pointer: coarse) {
+  .ReactCrop .ord-n,
+  .ReactCrop .ord-e,
+  .ReactCrop .ord-s,
+  .ReactCrop .ord-w {
+    display: none;
+  }
+  .ReactCrop__drag-handle {
+    width: 24px;
+    height: 24px;
+  }
+}
+.ReactCrop {
+  cursor: crosshair;
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.ReactCrop *,
+.ReactCrop :before,
+.ReactCrop :after {
+  box-sizing: border-box;
+}
+.ReactCrop--disabled,
+.ReactCrop--locked {
+  cursor: inherit;
+}
+.ReactCrop__child-wrapper {
+  max-height: inherit;
+}
+.ReactCrop__child-wrapper > img,
+.ReactCrop__child-wrapper > video {
+  max-width: 100%;
+  max-height: inherit;
+  touch-action: none;
+  display: block;
+}
+.ReactCrop__crop-selection {
+  cursor: move;
+  touch-action: none;
+  border: 1px dashed #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 9999em rgba(0, 0, 0, 0.5);
+}
+.ReactCrop--disabled .ReactCrop__crop-selection {
+  cursor: inherit;
+}
+.ReactCrop--circular-crop .ReactCrop__crop-selection {
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #fff, 0 0 0 9999em rgba(0, 0, 0, 0.5);
+}
+.ReactCrop__crop-selection:focus {
+  border-style: solid;
+  border-color: #00f;
+  outline: none;
+}
+.ReactCrop--invisible-crop .ReactCrop__crop-selection {
+  display: none;
+}
+.ReactCrop__rule-of-thirds-vt:before,
+.ReactCrop__rule-of-thirds-vt:after,
+.ReactCrop__rule-of-thirds-hz:before,
+.ReactCrop__rule-of-thirds-hz:after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  position: absolute;
+}
+.ReactCrop__rule-of-thirds-vt:before,
+.ReactCrop__rule-of-thirds-vt:after {
+  width: 1px;
+  height: 100%;
+}
+.ReactCrop__rule-of-thirds-vt:before {
+  left: 33.3333%;
+}
+.ReactCrop__rule-of-thirds-vt:after {
+  left: 66.6667%;
+}
+.ReactCrop__rule-of-thirds-hz:before,
+.ReactCrop__rule-of-thirds-hz:after {
+  width: 100%;
+  height: 1px;
+}
+.ReactCrop__rule-of-thirds-hz:before {
+  top: 33.3333%;
+}
+.ReactCrop__rule-of-thirds-hz:after {
+  top: 66.6667%;
+}
+.ReactCrop__drag-handle {
+  position: absolute;
+}
+.ReactCrop__drag-handle:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  outline: 1px solid rgba(0, 0, 0, 0);
+  display: block;
+  position: absolute;
+}
+.ReactCrop__drag-handle:focus:after {
+  background: #2dbfff;
+  border-color: #00f;
+}
+.ReactCrop .ord-nw {
+  cursor: nw-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop .ord-nw:after {
+  top: 0;
+  left: 0;
+}
+.ReactCrop .ord-n {
+  cursor: n-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 0;
+  left: 50%;
+}
+.ReactCrop .ord-n:after {
+  top: 0;
+}
+.ReactCrop .ord-ne {
+  cursor: ne-resize;
+  margin-top: -5px;
+  margin-right: -5px;
+  top: 0;
+  right: 0;
+}
+.ReactCrop .ord-ne:after {
+  top: 0;
+  right: 0;
+}
+.ReactCrop .ord-e {
+  cursor: e-resize;
+  margin-top: -5px;
+  margin-right: -5px;
+  top: 50%;
+  right: 0;
+}
+.ReactCrop .ord-e:after {
+  right: 0;
+}
+.ReactCrop .ord-se {
+  cursor: se-resize;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  bottom: 0;
+  right: 0;
+}
+.ReactCrop .ord-se:after {
+  bottom: 0;
+  right: 0;
+}
+.ReactCrop .ord-s {
+  cursor: s-resize;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  bottom: 0;
+  left: 50%;
+}
+.ReactCrop .ord-s:after {
+  bottom: 0;
+}
+.ReactCrop .ord-sw {
+  cursor: sw-resize;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop .ord-sw:after {
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop .ord-w {
+  cursor: w-resize;
+  margin-top: -5px;
+  margin-left: -5px;
+  top: 50%;
+  left: 0;
+}
+.ReactCrop .ord-w:after {
+  left: 0;
+}
+.ReactCrop__disabled .ReactCrop__drag-handle {
+  cursor: inherit;
+}
+.ReactCrop__drag-bar {
+  position: absolute;
+}
+.ReactCrop__drag-bar.ord-n {
+  width: 100%;
+  height: 6px;
+  margin-top: -3px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop__drag-bar.ord-e {
+  width: 6px;
+  height: 100%;
+  margin-right: -3px;
+  top: 0;
+  right: 0;
+}
+.ReactCrop__drag-bar.ord-s {
+  width: 100%;
+  height: 6px;
+  margin-bottom: -3px;
+  bottom: 0;
+  left: 0;
+}
+.ReactCrop__drag-bar.ord-w {
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  top: 0;
+  left: 0;
+}
+.ReactCrop--new-crop .ReactCrop__drag-bar,
+.ReactCrop--new-crop .ReactCrop__drag-handle,
+.ReactCrop--fixed-aspect .ReactCrop__drag-bar,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,
+.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w {
+  display: none;
+}
+@media (pointer: coarse) {
+  .ReactCrop .ord-n,
+  .ReactCrop .ord-e,
+  .ReactCrop .ord-s,
+  .ReactCrop .ord-w {
+    display: none;
+  }
+  .ReactCrop__drag-handle {
+    width: 24px;
+    height: 24px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background: #fff;
+  font-family: Inconsolata, monospace;
+  line-height: 1.2;
+  position: relative;
+}
+body:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(30% at right 70%);
+  clip-path: circle(30% at right 70%);
+  z-index: -1;
+  background: linear-gradient(red, #f0f);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(20% at 10% 10%);
+  clip-path: circle(20% at 10% 10%);
+  z-index: -1;
+  background: linear-gradient(#2196f3, #e91e63);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .image-editor {
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #000;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 1rem 2rem;
+  display: grid;
+}
+@media screen and (max-width: 600px) {
+  body .image-editor {
+    grid-template-columns: 1fr;
+  }
+}
+body .image-editor .preview {
+  width: 100%;
+}
+body .image-editor .preview h2 {
+  text-align: center;
+}
+body .image-editor .preview img {
+  height: auto;
+  width: 100%;
+}

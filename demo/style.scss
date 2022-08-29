@@ -44,6 +44,10 @@ body {
     gap: 10px;
     min-height: 100vh;
 
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
     .preview {
       width: 100%;
 
